@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const hbs = require('hbs');
+var hbsutils = require('hbs-utils')(hbs);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +14,16 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbsutils.registerWatchedPartials( path.join(__dirname,"views/partials"), {
+  onchange () {
+    // Partials has changed!
+    console.log(`Partials has changed!`)
+  }
+}, function () {
+  // The initial registration of partials is complete.
+  console.log(`The initial registration of partials is complete`)
+})
+
 
 app.use(logger('dev'));
 app.use(express.json());
