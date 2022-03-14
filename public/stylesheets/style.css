@@ -1,8 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0px;
+}
+
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+
 a {
-  color: #00B7FF;
+  color: black;
+}
+
+
+header.wrapper {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+header button {
+  width: 72px;
+  height: 72px;
+  padding: 0;
+  border: 0;
+  background: 0 0;
+  font-family: inherit;
+  line-height: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  margin-right: auto;
+  padding-left: 24px;
+  -webkit-font-smoothing: auto;
+  text-decoration: none;
+}
+
+.logo i {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  background: url(https://material.io/static/angular/mio-logo-sprite.7a0afcb5bbfe71a9a330.png) 100% 50%/auto 100% no-repeat;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 72px;
+  /*Agrega un height**/
+}
+
+.nav-list li.active{
+  color:#ffff !important;
+  opacity: 1;
+}
+.nav-list a {
+  position: relative;
+  color: #ffff;
+  padding: 0 16px;
+  line-height: 72px;
+  display: inline-block;
+
+
+}
+
+ul:hover > * {
+  opacity: 0.5;
+}
+
+ul:hover > *:hover {
+  opacity: 1;
+}
+a:hover{
+  color:#ffff;
+}
+
+.nav-indicator {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
 }

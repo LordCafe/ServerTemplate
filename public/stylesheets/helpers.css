@@ -1,0 +1,21 @@
+.wrapper,
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nigth {
+  background-color: var(--first-background-color);
+}
+
+.nigth a, span , p {
+  color:white;
+}

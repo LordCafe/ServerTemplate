@@ -1,0 +1,9 @@
+:root {
+  --first-background-color: #212121;
+  --second-background-color: #FFFFFF;
+}
+
+#secondParagraph {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}

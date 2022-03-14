@@ -3,12 +3,20 @@
 
 <head>
   <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/root.css' />
+  <link rel='stylesheet' href='/stylesheets/helpers.css' />
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
+{{>nav}}
+<main>
   {{{body}}}
-  <script src="/javascripts/react/main.js"></script>
+</main>
+
+{{>footer}}
+
+<script src="/javascripts/react/main.js"></script>
 </body>
 
 </html>
